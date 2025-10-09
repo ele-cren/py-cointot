@@ -1,0 +1,19 @@
+---
+description: Design system guidelines for UI framework, spacing, and layout principles
+alwaysApply: false
+---
+
+# Design System
+
+## UI Framework
+
+- Use **ShadcnUI** and **Tailwind CSS**
+
+## Spacing & Grid System
+
+- Primary grid: **8px increments** (8, 16, 24, 32, 40, 48...)
+- Secondary grid: **4px increments** (8, 12, 16, 20, 24, 28...) - only when absolutely necessary
+
+## Layout Principles
+
+- **Proximity principle**: Related elements should be placed closer to each other

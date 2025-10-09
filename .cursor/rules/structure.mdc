@@ -1,0 +1,112 @@
+---
+description: Project structure and folder organization guidelines
+alwaysApply: false
+---
+
+# 📁 Project Structure & Organization Rules
+
+## 📌 App Routing
+
+The `app` directory is exclusively used for **Next.js routing** (App Router).
+
+It contains only files required by Next.js for routing purposes:
+
+- page.tsx
+- layout.tsx
+- loading.tsx
+- error.tsx
+- not-found.tsx
+- route.ts
+
+### Scoped logic and components
+
+When a page contains logic or components that are **not reusable elsewhere**, they are colocated inside the `app` folder using **group folders** (e.g. `(group-name)`).
+
+#### Example: `/users` page and `/intras` section
+
+- app/users/page.tsx
+- app/users/(users)/types.ts
+- app/users/(users)/EditForm.tsx
+- app/intras/page.tsx
+- app/intras/(list-intras)/List.tsx
+- app/intras/(list-intras)/Pagination.tsx
+- app/intras/(intra-sheet)/Sheet.tsx
+- app/intras/(intra-sheet)/Form.tsx
+
+Each `(group)` folder contains files that are **specific to one part of the route** and are **not reused** outside of it.
+
+---
+
+## 🗂 src Directory
+
+The `src` folder contains **all reusable and cross-feature logic**.
+
+### Reusable Components
+
+- src/components/  
+  Reusable components not tied to any single feature.
+- src/components/ui/  
+  UI components
+- src/components/layout/  
+  Layout elements (e.g. Navbar, Sidebar).
+- src/components/typography/  
+  Text-based components like headings and paragraph styles.
+
+### Reusable Hooks
+
+- src/hooks/  
+  Custom React hooks that can be used across multiple components or features.
+
+### Reusable Features
+
+- src/features/[feature-name]/  
+  Each folder represents a **self-contained, reusable feature**.  
+  The feature itself can be reused, but internal components are **not meant to be imported individually elsewhere**.
+
+If a component needs to be reused between features, it must be moved to `src/components/`.
+
+---
+
+## 📄 File Naming Conventions
+
+### Components
+
+- Use PascalCase.
+- Example: `MyComponent.tsx`
+
+### Hooks
+
+- Use camelCase with `use` prefix.
+- Example: `useSomething.ts`
+
+### Utility / Logic / Types
+
+- Use kebab-case.
+- Example: `format-date.ts`
+
+### Internal Feature Files
+
+Inside a feature folder, if the folder name already provides context, filenames can be simplified:
+
+- types.ts
+- actions.ts
+- schemas.ts
+- constants.ts
+- utils.ts
+
+These simplified names are only allowed **within a feature folder**.
+
+---
+
+## ✅ Summary Table
+
+| Scope                    | Location                     | Reusable | Example                   |
+| ------------------------ | ---------------------------- | -------- | ------------------------- |
+| Routing logic            | app/                         | ❌       | page.tsx, layout.tsx      |
+| Page-specific components | app/route/(group)/           | ❌       | EditForm.tsx, types.ts    |
+| shadcn components        | src/components/ui/           | ✅       | Button.tsx                |
+| Layout components        | src/components/layout/       | ✅       | Navbar.tsx                |
+| Typography components    | src/components/typography/   | ✅       | Heading.tsx               |
+| Reusable UI components   | src/components/              | ✅       | Modal.tsx, InputField.tsx |
+| Reusable hooks           | src/hooks/                   | ✅       | usePagination.ts          |
+| Reusable features        | src/features/[feature-name]/ | ✅       | types.ts, Form.tsx        |
