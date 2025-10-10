@@ -39,7 +39,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="fixed inset-x-0 top-0">
+    <div className="fixed inset-x-0 top-0 z-20">
       <div className="bg-background/80 flex items-center justify-between p-6 backdrop-blur-md">
         <p className="text-base font-semibold">Pierre-Yves COINTOT</p>
         <nav className="max-lg:hidden">
