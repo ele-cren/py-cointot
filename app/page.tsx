@@ -3,6 +3,7 @@ import { Wrapper } from '@/src/components/layout/Wrapper'
 import { About } from './(home)/About'
 import { Hero } from './(home)/Hero'
 import { Practices } from './(home)/Practices'
+import { Pricing } from './(home)/Pricing'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Hero />
         <About />
         <Practices />
+        <Pricing />
       </Wrapper>
     </main>
   )
