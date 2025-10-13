@@ -1,7 +1,7 @@
 import portrait from '@/public/images/portrait.webp'
 import { Button } from '@/src/components/ui/button'
 import { cn } from '@/src/lib/utils'
-import { ArrowRightIcon, CalendarIcon, NewspaperIcon } from 'lucide-react'
+import { ArrowRightIcon, CalendarIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -31,7 +31,7 @@ function ContentSide({ className = '' }: { className?: string }) {
         </h1>
         <p className="text-2xl">
           Approche douce et personnalisée pour soulager les douleurs et
-          restaurer l’équilibre du corps.
+          restaurer l'équilibre du corps.
         </p>
       </div>
       <div className="flex items-center gap-6 max-sm:flex-col">
@@ -53,7 +53,7 @@ function ImageSide({ className = '' }: { className?: string }) {
     <Image
       src={portrait}
       alt="Pierre-Yves COINTOT"
-      className="w-72 rounded-md shadow-sm max-lg:mx-auto"
+      className={cn('w-72 rounded-md shadow-sm max-lg:mx-auto', className)}
     />
   )
 }
