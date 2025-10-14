@@ -6,6 +6,7 @@ import { Practices } from './(home)/Practices'
 import { Pricing } from './(home)/Pricing'
 import { Faq } from './(home)/Faq'
 import { Testimonials } from './(home)/Testimonials'
+import { Gallery } from './(home)/Gallery'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Faq />
         <Pricing />
         <Testimonials />
+        <Gallery />
       </Wrapper>
     </main>
   )
