@@ -19,12 +19,7 @@ export function Faq() {
             cabinet.
           </p>
         </div>
-        <Accordion
-          type="single"
-          collapsible
-          className="w-full"
-          defaultValue="item-1"
-        >
+        <Accordion type="single" collapsible className="w-full">
           <AccordionItem value="item-1">
             <AccordionTrigger>
               🕒 Comment se déroule une séance d&apos;ostéopathie ?
