@@ -2,7 +2,7 @@ import { FeaturesSectionWithHoverEffects } from '@/src/components/blocks/feature
 
 export function Practices() {
   return (
-    <section className="bg-background px-6 py-12">
+    <section className="bg-background px-6 py-12" id="pratiques">
       <div className="mx-auto flex max-w-7xl flex-col gap-8">
         <div className="flex flex-col gap-6">
           <h2 className="text-center text-2xl leading-none font-semibold">

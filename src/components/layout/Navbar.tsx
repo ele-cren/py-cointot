@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Button } from '../ui/button'
 import { MenuIcon, CalendarIcon } from 'lucide-react'
 import { useState } from 'react'
+import { useMediaQuery } from 'react-responsive'
 
 const navItems = [
   {
@@ -31,12 +32,43 @@ const navItems = [
   },
   {
     label: 'Le cabinet',
-    href: '#le-cabinet',
+    href: '#cabinet',
   },
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const isXl = useMediaQuery({
+    query: '(min-width: 1280px)',
+  })
+  const isLg = useMediaQuery({
+    query: '(max-width: 1280px)',
+  })
+  const isMobile = useMediaQuery({
+    query: '(max-width: 1024px)',
+  })
+
+  function handleClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
+    e.preventDefault()
+
+    if (typeof document !== 'undefined') {
+      const sectionId = href.replace('#', '')
+      const section = document.getElementById(sectionId)
+
+      if (section) {
+        const navbarHeight = isMobile ? 84 : isLg ? 72 : 80
+        console.log(navbarHeight)
+        const elementPosition = section.getBoundingClientRect().top
+        const offsetPosition =
+          elementPosition + window.pageYOffset - navbarHeight
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        })
+      }
+    }
+  }
 
   return (
     <div className="fixed inset-x-0 top-0 z-20">
@@ -46,7 +78,11 @@ export function Navbar() {
           <ul className="flex gap-8 text-sm">
             {navItems.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="hover:text-muted-foreground">
+                <Link
+                  href={item.href}
+                  className="hover:text-muted-foreground"
+                  onClick={(e) => handleClick(e, item.href)}
+                >
                   {item.label}
                 </Link>
               </li>
@@ -74,7 +110,10 @@ export function Navbar() {
                 <Link
                   href={item.href}
                   className="hover:text-background/80"
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => {
+                    handleClick(e, item.href)
+                    setIsOpen(false)
+                  }}
                 >
                   {item.label}
                 </Link>

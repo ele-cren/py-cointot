@@ -7,7 +7,7 @@ import {
 
 export function Faq() {
   return (
-    <section className="bg-muted/30 px-6 py-12">
+    <section className="bg-muted/30 px-6 py-12" id="questions-frequentes">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 xl:px-0">
         <div className="flex flex-col gap-6">
           <h2 className="text-center text-2xl leading-none font-semibold">

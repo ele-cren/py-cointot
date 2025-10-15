@@ -26,7 +26,7 @@ import { MapPinIcon, PhoneIcon, ReceiptEuroIcon } from 'lucide-react'
 
 export function Pricing() {
   return (
-    <section className="bg-background px-6 py-12 xl:px-0">
+    <section className="bg-background px-6 py-12 xl:px-0" id="tarifs">
       <div className="mx-auto flex max-w-7xl gap-12 max-lg:flex-col max-lg:gap-6">
         <div className="flex min-w-0 basis-1/2 flex-col gap-12 max-lg:basis-full max-lg:gap-6">
           <Card>

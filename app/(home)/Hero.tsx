@@ -60,7 +60,7 @@ function ImageSide({ className = '' }: { className?: string }) {
 
 export function Hero() {
   return (
-    <section className="mx-auto max-w-7xl py-12 max-xl:px-6">
+    <section className="mx-auto max-w-7xl py-12 max-xl:px-6" id="accueil">
       <div className="flex gap-12 max-lg:flex-col">
         <ContentSide />
         <ImageSide />
