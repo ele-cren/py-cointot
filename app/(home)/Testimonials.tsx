@@ -1,8 +1,8 @@
-import { Testimonial } from '@/src/components/ui/testimonial-card'
 import testimonial1 from '@/public/images/testimonial1.jpg'
 import testimonial2 from '@/public/images/testimonial2.jpg'
 import testimonial3 from '@/public/images/testimonial3.jpg'
 import testimonial4 from '@/public/images/testimonial4.jpg'
+import { Testimonial } from './Testimonial'
 
 const testimonials = [
   {
