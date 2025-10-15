@@ -1,7 +1,7 @@
+import { TailwindIndicator } from '@/src/components/layout/TailwindIndicator'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
-import { TailwindIndicator } from '@/src/components/layout/TailwindIndicator'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',

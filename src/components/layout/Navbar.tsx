@@ -2,8 +2,13 @@
 import Link from 'next/link'
 import { Button } from '../ui/button'
 import { MenuIcon, CalendarIcon } from 'lucide-react'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import gsap from 'gsap'
+
+gsap.registerPlugin(ScrollTrigger)
 
 const navItems = [
   {
@@ -38,15 +43,45 @@ const navItems = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const isXl = useMediaQuery({
-    query: '(min-width: 1280px)',
-  })
   const isLg = useMediaQuery({
     query: '(max-width: 1280px)',
   })
   const isMobile = useMediaQuery({
     query: '(max-width: 1024px)',
   })
+  const navListRef = useRef<HTMLUListElement>(null)
+
+  useGSAP(() => {
+    const navElems = navListRef.current?.querySelectorAll('a')
+    const navbarHeight = isMobile ? 84 : isLg ? 72 : 80
+
+    navElems?.forEach((elem) => {
+      const sectionId = elem.getAttribute('href')?.replace('#', '') ?? ''
+      const section = document.getElementById(sectionId)
+
+      if (section) {
+        ScrollTrigger.create({
+          trigger: section,
+          start: `top ${navbarHeight}px`,
+          end: `bottom ${navbarHeight}px`,
+          onEnter: () => {
+            navElems.forEach((elem) => {
+              elem.classList.remove('font-semibold')
+            })
+
+            elem.classList.add('font-semibold')
+          },
+          onEnterBack: () => {
+            navElems.forEach((elem) => {
+              elem.classList.remove('font-semibold')
+            })
+
+            elem.classList.add('font-semibold')
+          },
+        })
+      }
+    })
+  }, [isMobile, isLg])
 
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
     e.preventDefault()
@@ -56,8 +91,7 @@ export function Navbar() {
       const section = document.getElementById(sectionId)
 
       if (section) {
-        const navbarHeight = isMobile ? 84 : isLg ? 72 : 80
-        console.log(navbarHeight)
+        const navbarHeight = isMobile ? 83 : isLg ? 71 : 79
         const elementPosition = section.getBoundingClientRect().top
         const offsetPosition =
           elementPosition + window.pageYOffset - navbarHeight
@@ -75,7 +109,7 @@ export function Navbar() {
       <div className="bg-background/80 flex items-center justify-between p-6 backdrop-blur-md">
         <p className="text-base font-semibold">Pierre-Yves COINTOT</p>
         <nav className="max-lg:hidden">
-          <ul className="flex gap-8 text-sm">
+          <ul className="flex gap-8 text-sm" ref={navListRef}>
             {navItems.map((item) => (
               <li key={item.href}>
                 <Link
