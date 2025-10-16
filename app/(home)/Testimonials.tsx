@@ -38,11 +38,11 @@ export function Testimonials() {
       <div className="mx-auto flex max-w-7xl flex-col gap-8 xl:px-0">
         <div className="flex flex-col gap-6">
           <h2 className="text-center text-2xl leading-none font-semibold">
-            Ils ont fait confiance à Pierre-Yves
+            Ils m'ont fait confiance
           </h2>
           <p className="mx-auto max-w-full text-center text-base lg:max-w-1/2">
-            La satisfaction et le bien-être des patients sont au cœur de la
-            pratique de Pierre-Yves.
+            La satisfaction et le bien-être des patients sont au cœur de ma
+            pratique.
             <br />
             Découvrez quelques témoignages qui reflètent la qualité de
             l'accompagnement et l'attention portée à chacun.

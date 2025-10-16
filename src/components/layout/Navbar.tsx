@@ -131,9 +131,18 @@ export function Navbar() {
         >
           <MenuIcon />
         </Button>
-        <Button size={'sm'} className="flex items-center gap-2 max-xl:hidden">
-          <CalendarIcon />
-          Prendre rendez-vous
+        <Button
+          size={'sm'}
+          className="flex items-center gap-2 max-xl:hidden"
+          asChild
+        >
+          <Link
+            href="https://www.doctolib.fr/osteopathe/aime-la-plagne/pierre-yves-cointot"
+            target="_blank"
+          >
+            <CalendarIcon />
+            Prendre rendez-vous
+          </Link>
         </Button>
       </div>
       {isOpen && (

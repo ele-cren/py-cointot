@@ -26,14 +26,12 @@ export function Faq() {
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
               <p>
-                Une séance dure en moyenne <strong>45 minutes à 1 heure</strong>
-                .
+                Une séance dure en moyenne <strong>45 minutes</strong>.
               </p>
               <p>
-                Après un échange sur vos antécédents et vos symptômes,
-                Pierre-Yves Cointot réalise un <strong>bilan global</strong>{' '}
-                avant d&apos;effectuer des manipulations manuelles adaptées à
-                votre situation.
+                Après un échange sur vos antécédents et vos symptômes, je
+                réalise un <strong>bilan global</strong> avant d&apos;effectuer
+                des manipulations manuelles adaptées à votre situation.
               </p>
               <p>
                 La séance se termine par des conseils personnalisés pour
@@ -89,37 +87,6 @@ export function Faq() {
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-5">
-            <AccordionTrigger>
-              👶 À partir de quel âge un bébé peut-il consulter ?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                Dès les <strong>premiers jours de vie</strong>.
-              </p>
-              <p>
-                Une séance peut être bénéfique après un accouchement difficile,
-                une césarienne, une présentation en siège ou en cas de troubles
-                du sommeil, de régurgitations ou de plagiocéphalie.
-              </p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-6">
-            <AccordionTrigger>
-              🤰 L&apos;ostéopathie est-elle conseillée pendant la grossesse ?
-            </AccordionTrigger>
-            <AccordionContent className="flex flex-col gap-4 text-balance">
-              <p>
-                Oui, elle aide à{' '}
-                <strong>
-                  soulager les douleurs lombaires, ligamentaires ou digestives
-                </strong>
-                , à <strong>favoriser la mobilité du bassin</strong> et à{' '}
-                <strong>préparer le corps à l&apos;accouchement</strong>, en
-                toute sécurité pour la maman et le bébé.
-              </p>
-            </AccordionContent>
-          </AccordionItem>
-          <AccordionItem value="item-7">
             <AccordionTrigger>
               🏃‍♂️ Combien de séances sont nécessaires ?
             </AccordionTrigger>

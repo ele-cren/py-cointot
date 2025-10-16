@@ -1,9 +1,10 @@
-import portrait from '@/public/images/portrait.webp'
+import portrait from '@/public/images/portrait.jpg'
 import { Button } from '@/src/components/ui/button'
 import { cn } from '@/src/lib/utils'
 import { ArrowRightIcon, CalendarIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { DiscoverButton } from './DiscoverButton'
 
 function AvailableNow() {
   return (
@@ -29,20 +30,20 @@ function ContentSide({ className = '' }: { className?: string }) {
           <span className="font-semibold"> Ostéopathe D.O.</span> à
           <span className="text-muted-foreground"> Aime-la-Plagne</span>
         </h1>
-        <p className="text-2xl">
-          Approche douce et personnalisée pour soulager les douleurs et
-          restaurer l'équilibre du corps.
+        <p className="text-muted-foreground text-2xl italic">
+          CFPMS - Prise en charge du sportif
         </p>
       </div>
       <div className="flex items-center gap-6 max-sm:flex-col">
-        <Button size={'lg'} className="flex items-center gap-2">
-          <CalendarIcon /> Prendre rendez-vous sur Doctolib
-        </Button>
-        <Button variant={'link'} className="flex items-center gap-2" asChild>
-          <Link href={'#presentation'}>
-            Découvrir l'approche <ArrowRightIcon />
+        <Button size={'lg'} className="flex items-center gap-2" asChild>
+          <Link
+            href="https://www.doctolib.fr/osteopathe/aime-la-plagne/pierre-yves-cointot"
+            target="_blank"
+          >
+            <CalendarIcon /> Prendre rendez-vous sur Doctolib
           </Link>
         </Button>
+        <DiscoverButton />
       </div>
     </div>
   )

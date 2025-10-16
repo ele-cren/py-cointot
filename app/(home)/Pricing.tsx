@@ -23,6 +23,7 @@ import {
   TableRow,
 } from '@/src/components/ui/table'
 import { MapPinIcon, PhoneIcon, ReceiptEuroIcon } from 'lucide-react'
+import Link from 'next/link'
 
 export function Pricing() {
   return (
@@ -50,7 +51,7 @@ export function Pricing() {
                   </TableRow>
                   <TableRow>
                     <TableCell>Consultation à domicile</TableCell>
-                    <TableCell>100€</TableCell>
+                    <TableCell>80€</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -85,8 +86,13 @@ export function Pricing() {
               </ItemContent>
             </div>
             <ItemActions className="max-sm:w-full">
-              <Button size="sm" variant="outline" className="w-full">
-                Réserver une séance
+              <Button size="sm" variant="outline" className="w-full" asChild>
+                <Link
+                  href="https://www.doctolib.fr/osteopathe/aime-la-plagne/pierre-yves-cointot"
+                  target="_blank"
+                >
+                  Réserver une séance
+                </Link>
               </Button>
             </ItemActions>
           </Item>
@@ -118,31 +124,31 @@ export function Pricing() {
               <TableBody>
                 <TableRow>
                   <TableCell>Lundi</TableCell>
-                  <TableCell>9h00 - 19h00</TableCell>
+                  <TableCell>8h00 - 21h30</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Mardi</TableCell>
-                  <TableCell>9h00 - 19h00</TableCell>
+                  <TableCell>8h00 - 21h30</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Mercredi</TableCell>
-                  <TableCell>9h00 - 19h00</TableCell>
+                  <TableCell>8h00 - 21h30</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Jeudi</TableCell>
-                  <TableCell>9h00 - 19h00</TableCell>
+                  <TableCell>8h00 - 21h30</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Vendredi</TableCell>
-                  <TableCell>9h00 - 19h00</TableCell>
+                  <TableCell>8h00 - 21h30</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Samedi</TableCell>
-                  <TableCell>9h00 - 19h00</TableCell>
+                  <TableCell>8h00 - 21h30</TableCell>
                 </TableRow>
                 <TableRow className="bg-muted text-muted-foreground hover:bg-muted-foreground/10">
                   <TableCell>Dimanche</TableCell>
-                  <TableCell>Fermé</TableCell>
+                  <TableCell>Selon disponibilité</TableCell>
                 </TableRow>
               </TableBody>
             </Table>

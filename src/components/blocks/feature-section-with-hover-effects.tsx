@@ -3,10 +3,28 @@ import { cn } from '@/src/lib/utils'
 export function FeaturesSectionWithHoverEffects() {
   const features = [
     {
-      title: 'Ostéopathie crânienne',
+      title: "Techniques d'énergie musculaire",
       description:
-        'Agit sur les tensions et les déséquilibres du crâne et du système nerveux. Elle aide notamment à améliorer les troubles du sommeil, les maux de tête ou les tensions liées au stress.',
-      icon: <span className="text-4xl">🧠</span>,
+        'Méthode douce qui utilise la contraction volontaire des muscles pour relâcher les tensions, améliorer la mobilité articulaire et rééquilibrer le système musculo-squelettique.',
+      icon: <span className="text-4xl">⚡</span>,
+    },
+    {
+      title: 'Ostéopathie structurelle',
+      description:
+        "S'appuie sur des manipulations précises des articulations et des muscles pour restaurer la mobilité, corriger les déséquilibres et soulager les douleurs mécaniques.",
+      icon: <span className="text-4xl">🦴</span>,
+    },
+    {
+      title: 'Ostéopathie du sport',
+      description:
+        "Permet d'optimiser les performances, d'améliorer la récupération et de prévenir les blessures grâce à des techniques adaptées à la pratique physique.",
+      icon: <span className="text-4xl">💪</span>,
+    },
+    {
+      title: 'K-Tape',
+      description:
+        'Technique utilisant des bandes adhésives élastiques pour soutenir les muscles et les articulations sans limiter le mouvement.',
+      icon: <span className="text-4xl">🩹</span>,
     },
     {
       title: 'Ostéopathie de la femme & de la femme enceinte',
@@ -20,12 +38,7 @@ export function FeaturesSectionWithHoverEffects() {
         'Destinée aux nourrissons et aux enfants, elle traite les troubles liés à la naissance (plagiocéphalie, reflux, sommeil) et soutient un bon développement moteur et postural.',
       icon: <span className="text-4xl">👶</span>,
     },
-    {
-      title: 'Ostéopathie du sport',
-      description:
-        "Permet d'optimiser les performances, d'améliorer la récupération et de prévenir les blessures grâce à des techniques adaptées à la pratique physique.",
-      icon: <span className="text-4xl">💪</span>,
-    },
+
     {
       title: 'Ostéopathie maxillo-faciale et oro-faciale',
       description:
@@ -37,12 +50,6 @@ export function FeaturesSectionWithHoverEffects() {
       description:
         'Travaille sur les tissus conjonctifs et les fascias, souvent responsables de douleurs diffuses ou chroniques. Elle favorise un relâchement global et une meilleure circulation des fluides.',
       icon: <span className="text-4xl">🌿</span>,
-    },
-    {
-      title: 'Ostéopathie structurelle',
-      description:
-        "S'appuie sur des manipulations précises des articulations et des muscles pour restaurer la mobilité, corriger les déséquilibres et soulager les douleurs mécaniques.",
-      icon: <span className="text-4xl">🦴</span>,
     },
   ]
   return (

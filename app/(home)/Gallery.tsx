@@ -1,18 +1,21 @@
+import cab1 from '@/public/images/cabinet/cab_1.jpg'
+import cab2 from '@/public/images/cabinet/cab_2.jpg'
+import cab6 from '@/public/images/cabinet/cab_6.jpg'
 import Carousel from '@/src/components/ui/carousel'
 
 const slideData = [
   {
     title: 'Le cabinet',
-    src: 'https://images.unsplash.com/photo-1665483057650-f43811d36187?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764',
+    src: cab1.src
   },
   {
     title: "La salle d'attente",
-    src: 'https://images.unsplash.com/photo-1604328702728-d26d2062c20b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170',
+    src: cab2.src
   },
   {
     title: 'La façade',
-    src: 'https://images.unsplash.com/photo-1528698827591-e19ccd7bc23d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1176',
-  },
+    src: cab6.src
+  }
 ]
 
 export function Gallery() {
@@ -24,8 +27,8 @@ export function Gallery() {
             Le cabinet en images
           </h2>
           <p className="mx-auto max-w-full text-center text-base lg:max-w-1/2">
-            Découvrez le cabinet de Pierre-Yves Cointot, un lieu chaleureux et
-            professionnel où chaque séance est pensée pour votre bien-être.
+            Découvrez mon cabinet, un lieu chaleureux et professionnel où chaque
+            séance est pensée pour votre bien-être.
           </p>
         </div>
         <div className="relative h-full w-full overflow-hidden pb-18">
