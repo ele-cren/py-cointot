@@ -1,7 +1,7 @@
 import portrait from '@/public/images/portrait.jpg'
 import { Button } from '@/src/components/ui/button'
 import { cn } from '@/src/lib/utils'
-import { ArrowRightIcon, CalendarIcon } from 'lucide-react'
+import { CalendarIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { DiscoverButton } from './DiscoverButton'
