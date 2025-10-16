@@ -79,7 +79,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
               ? 'scale(0.98) rotateX(8deg)'
               : 'scale(1) rotateX(0deg)',
           transition: 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-          transformOrigin: 'bottom',
+          transformOrigin: 'bottom'
         }}
       >
         <div
@@ -88,13 +88,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
             transform:
               current === index
                 ? 'translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)'
-                : 'none',
+                : 'none'
           }}
         >
           <Image
-            className="absolute inset-0 h-[120%] w-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+            className="absolute inset-0 h-[120%] w-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out [image-orientation:from-image]"
             style={{
-              opacity: current === index ? 1 : 0.5,
+              opacity: current === index ? 1 : 0.5
             }}
             alt={title}
             src={src}
@@ -138,7 +138,7 @@ interface CarouselControlProps {
 const CarouselControl = ({
   type,
   title,
-  handleClick,
+  handleClick
 }: CarouselControlProps) => {
   return (
     <button
@@ -186,7 +186,7 @@ export default function Carousel({ slides }: CarouselProps) {
       <ul
         className="absolute mx-[-4vmin] flex transition-transform duration-1000 ease-in-out"
         style={{
-          transform: `translateX(-${current * (100 / slides.length)}%)`,
+          transform: `translateX(-${current * (100 / slides.length)}%)`
         }}
       >
         {slides.map((slide, index) => (
