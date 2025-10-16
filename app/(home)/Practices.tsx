@@ -9,11 +9,11 @@ export function Practices() {
             Des soins adaptés à chaque besoin
           </h2>
           <p className="mx-auto max-w-full text-center text-base lg:max-w-1/2">
-            Pierre-Yves Cointot pratique une ostéopathie complète, fondée sur
-            l'écoute et l'adaptation des techniques à chaque profil de patient :
+            Je pratique une ostéopathie complète, fondée sur l'écoute et
+            l'adaptation des techniques à chaque profil de patient :
             nourrissons, femmes enceintes, adultes, sportifs ou seniors.
             <br />
-            <br /> Son approche intègre différentes spécialités permettant une
+            <br /> Mon approche intègre différentes spécialités permettant une
             prise en charge personnalisée, en douceur et en profondeur.
           </p>
         </div>
