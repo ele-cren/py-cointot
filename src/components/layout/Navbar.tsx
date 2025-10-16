@@ -13,41 +13,41 @@ gsap.registerPlugin(ScrollTrigger)
 const navItems = [
   {
     label: 'Accueil',
-    href: '#accueil',
+    href: '#accueil'
   },
   {
     label: 'Présentation',
-    href: '#presentation',
+    href: '#presentation'
   },
   {
     label: 'Pratiques',
-    href: '#pratiques',
+    href: '#pratiques'
   },
   {
     label: 'Questions fréquentes',
-    href: '#questions-frequentes',
+    href: '#questions-frequentes'
   },
   {
     label: 'Tarifs',
-    href: '#tarifs',
+    href: '#tarifs'
   },
   {
     label: 'Témoignages',
-    href: '#temoignages',
+    href: '#temoignages'
   },
   {
     label: 'Le cabinet',
-    href: '#cabinet',
-  },
+    href: '#cabinet'
+  }
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const isLg = useMediaQuery({
-    query: '(max-width: 1280px)',
+    query: '(max-width: 1280px)'
   })
   const isMobile = useMediaQuery({
-    query: '(max-width: 1024px)',
+    query: '(max-width: 1024px)'
   })
   const navListRef = useRef<HTMLUListElement>(null)
 
@@ -77,7 +77,7 @@ export function Navbar() {
             })
 
             elem.classList.add('font-semibold')
-          },
+          }
         })
       }
     })
@@ -91,14 +91,14 @@ export function Navbar() {
       const section = document.getElementById(sectionId)
 
       if (section) {
-        const navbarHeight = isMobile ? 83 : isLg ? 71 : 79
+        const navbarHeight = isMobile ? 81 : isLg ? 69 : 77
         const elementPosition = section.getBoundingClientRect().top
         const offsetPosition =
           elementPosition + window.pageYOffset - navbarHeight
 
         window.scrollTo({
           top: offsetPosition,
-          behavior: 'smooth',
+          behavior: 'smooth'
         })
       }
     }
