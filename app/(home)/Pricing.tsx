@@ -4,7 +4,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle
 } from '@/src/components/ui/card'
 import {
   Item,
@@ -12,7 +12,7 @@ import {
   ItemContent,
   ItemDescription,
   ItemMedia,
-  ItemTitle,
+  ItemTitle
 } from '@/src/components/ui/item'
 import {
   Table,
@@ -20,7 +20,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow
 } from '@/src/components/ui/table'
 import { MapPinIcon, PhoneIcon, ReceiptEuroIcon } from 'lucide-react'
 import Link from 'next/link'
@@ -46,7 +46,7 @@ export function Pricing() {
                     <TableCell>60€</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>Nourrisson / enfant / étudiant</TableCell>
+                    <TableCell>Nourrisson / enfant</TableCell>
                     <TableCell>55€</TableCell>
                   </TableRow>
                   <TableRow>
